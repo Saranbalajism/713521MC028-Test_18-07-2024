@@ -88,6 +88,76 @@
         <div class="col"></div>
     </div>
 </div>
+<div class="d-flex justify-content-center">
+</div> <div class="container">
+    <div class="card">
+        <div class="card-body h">
+            <h2 class="card-title text-center text-danger h1 fw-bold"> comedy Quote</h2>
+            <p id="quote" class="card-text my-5"></p>
+        </div>
+    </div>
+    <div class="card-footer d-inline-block">
+        <button class="btn btn-outline-dark" onclick="generateRanQuote()">Get Another</button>
+    </div>
+</div>
+
+
+<script>
+    var quotes = [
+        {
+            quote: "Why did the bicycle fall down? Because it was tyre-d!",
+            author: "sb"
+        },
+        {
+            quote: "What do you call a funny mountain?Hill-arious!",
+            author: "Person 1"
+        },
+        {
+            quote: "Why did the tomato turn red? Because it saw the salad dressing!",
+            author: "Benjamin"
+        },
+        {
+            quote: "What did the traffic light say to the car? Don't look, I'm changing!",
+            author: "Person 2"
+        },
+        {
+            quote: "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            author: "Emerson"
+        },
+        {
+            quote: "How do you organize a space party? You planet!",
+            author: 'San'
+        },
+        {
+            quote: "Why did the tomato blush? Because it saw the salad dressing!",
+            author: "Tesla"
+        }];
+
+
+        function generateRanQuote(){
+            randomNumR = randomnum();
+        randomNumG = randomnum();
+        randomNumB = randomnum();
+        document.body.style.backgroundColor=`rgb(${randomNumR},${randomNumG},${randomNumB})`;
+    
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+            var randomQuote = quotes[randomIndex];
+            document.getElementById("quote").innerHTML ="<h1 class ='display-4 fw-bold text-warning'>" + randomQuote.quote + '<br>' + "<h1 class='h5 text-success'> Author: " + randomQuote.author;
+
+        }
+    var randomNum = 0;
+    function randomnum() {
+    return Math.floor(Math.random() * (255-1+1)) + 1;
+    }
+
+    // function generateRanQuote(){
+    //     randomNumR = randomnum();
+    //     randomNumG = randomnum();
+    //     randomNumB = randomnum();
+    //     document.body.style.backgroundColor=`rgb(${randomNumR},${randomNumG},${randomNumB})`;
+    // }
+
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
